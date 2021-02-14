@@ -28,7 +28,7 @@ public class PrimeFactors {
 			}
 			if(ile==1 && max_p_factor<i && zakres%i==0) max_p_factor = i; 
 			ile = 0L;
-		}
+		} //musiałem dodać jakąś zmianę żeby komentarz wystawić, nie umiałem inaczej
 		
 		return max_p_factor;
 	}
