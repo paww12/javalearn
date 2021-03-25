@@ -68,4 +68,14 @@ public class Palindromy {
 
 		return judge_result;
 	}
+	
+	private static boolean isPalindrome(int number) {
+		String numberString = String.valueOf(number);
+		int numberLength = numberString.length();
+		boolean isLengthOdd = numberLength % 2 != 0; //why this is needed?
+		String firstHalf = numberString.substring(0, numberLength / 2);
+		String secondHalf = numberString.substring(isLengthOdd ? ((numberLength + 1) / 2) : numberLength / 2, numberLength);
+		String secondHalfReversed = new StringBuilder(secondHalf).reverse().toString();
+		return firstHalf.equals(secondHalfReversed); //why equals is used instead of '==' operator? 
+	}
 }
